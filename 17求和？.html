@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt1" value="" />
+		<input type="text" id="txt2" value="" />
+		<input type="button" id="btn1" value="求和" />
+
+		<script type="text/javascript">
+			var oTxt1 = document.getElementById("txt1")
+			var oTxt1 = document.getElementById("txt2")
+			var oBtn = document.getElementById("btn1")
+
+			oBtn.onclick = function() {
+				var number1 = parseInt(oTxt1.value)
+				var number2 = parseInt(oTxt2.value)
+				alert(typeof number1)
+				alert(number1 + number2)
+			}
+		</script>
+	</body>
+</html>

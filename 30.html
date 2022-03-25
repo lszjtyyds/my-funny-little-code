@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 80px;
+				height: 80px;
+				margin: 20px;
+				background: #7CFC00;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<script type="text/javascript">
+			var aDiv = document.getElementsByTagName("div")
+var timer
+			function move (obj,target){
+				clearInterval(obj.timer)
+				obj.timer = setInterval(function() {
+					if (obj.offsetWidth == target) {
+						clearInterval(obj.timer)
+					} else {
+						var speed = (target - obj.offsetWidth) / 20
+						obj.style.width = obj.offsetWidth + speed + 'px'
+					}
+				}, 30)
+			}
+			
+			for (var i=0;i<aDiv.length;i++){
+				aDiv[i].onmouseover=function(){
+					move(this,300)
+				}
+				aDiv[i].onmouseout=function(){
+					move(this,100)
+				}
+			}
+		</script>
+	</body>
+</html>

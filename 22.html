@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">window.location</button>
+		<button id="btn2">window.open</button>
+		<button id="btn3">window.close</button>
+		<button id="btn4">window.write</button>
+		<button id="btn5">prompt</button>
+		
+		<script type="text/javascript">
+			document.getElementById("btn1").onclick=function () {
+				window.location='16.html'
+			}
+			document.getElementById("btn2").onclick=function () {
+				window.open('16.html')
+			}
+			document.getElementById("btn3").onclick=function () {
+				window.location.close()
+			}
+			document.getElementById("btn4").onclick=function () {
+				window.write('qqqqq')
+			}
+			document.getElementById("btn5").onclick=function () {
+				prompt('输入短信验证码')
+			}
+		</script>
+	</body>
+</html>

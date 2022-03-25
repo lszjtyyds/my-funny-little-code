@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: o;
+				margin: 0;
+			}
+
+			div {
+				width: 100px;
+				height: 100px;
+				background: palegreen;
+				position: absolute;
+				top: 40px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<button>运动</button>
+		<div></div>
+
+		<script type="text/javascript">
+			var oDiv = document.getElementsByTagName("div")[0]
+			var oBtn = document.getElementsByTagName("button")[0]
+
+			// setTimeout(move,1000)
+
+			oBtn.onclick = function() {
+				timerA = setInterval(function move() {
+					if (oDiv.offsetLeft <= 500) {
+						oDiv.style.left = oDiv.offsetLeft + 10 + 'px'
+					} else {
+						clearInterval(timerA)
+					}
+				}, 30)
+			}
+		</script>
+
+	</body>
+</html>

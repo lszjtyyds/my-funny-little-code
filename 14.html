@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.hover{
+				background: palegoldenrod;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button"  value="空我" class=""/>
+		<input type="button"  value="时王" class=""/>
+		<input type="button"  value="龙骑" class=""/>
+		<input type="button"  value="甲斗" class=""/>
+		<input type="button"  value="帝骑" class=""/>
+		
+		<script type="text/javascript">
+			var aBtn = document.getElementsByTagName('input')
+			aBtn[0].onmouseover = function() {
+				for (var i=0;i<aBtn.length;i++) {
+					aBtn[i].className = ''
+				}
+				this.className = 'hover'
+			}
+			aBtn[1].onmouseover = function() {
+				for (var i=0;i<aBtn.length;i++) {
+					aBtn[i].className = ''
+				}
+				this.className = 'hover'
+			}
+			aBtn[2].onmouseover = function() {
+				for (var i=0;i<aBtn.length;i++) {
+					aBtn[i].className = ''
+				}
+				this.className = 'hover'
+			}
+			aBtn[3].onmouseover = function() {
+				for (var i=0;i<aBtn.length;i++) {
+					aBtn[i].className = ''
+				}
+				this.className = 'hover'
+			}
+			aBtn[4].onmouseover = function() {
+				for (var i=0;i<aBtn.length;i++) {
+					aBtn[i].className = ''
+				}
+				this.className = 'hover'
+			}
+			
+		</script>
+	</body>
+</html>

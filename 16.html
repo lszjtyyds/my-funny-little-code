@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			main{
+				position: relative;
+				width: 400px;
+				height: 250px;
+				margin: 100px auto;
+			}
+			nav{
+				position: absolute;
+				right: 30px;
+				bottom: 10px;
+				
+			}
+			
+			input {
+				background: none;
+				border: none;
+				font-size: 15px;
+				margin-right: 8px;
+				color: #DB7093;
+			}
+
+			.hover {
+				border-bottom: 2px solid coral;
+			}
+
+			div {
+				margin-top: 10px;
+				background: url(01%20-%20副本.jpg);
+				background-size: cover;
+				width: 400px;
+				height: 250px;
+				display: none;
+				color: white;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<nav>
+				
+				<input type="button" value="空我" class="hover" />
+				<input type="button" value="时王" class="" />
+				<input type="button" value="龙骑" class="" />
+				<input type="button" value="甲斗" class="" />
+				<input type="button" value="帝骑" class="" />
+
+			</nav>
+
+			<div style="display: block;">KUUGA的不完全型态，基本色是白色，角也比其他型态的要短。在故事开始时五代首先变成这个型态，五代认为这是因为「成为战士的思想准备还不够」。</div>
+			<div>KUUGA的基本型态。基本色是红色。掌管火焰之战士。身体能力最平衡的型态,最适合空手的格斗战。也能根据不同的敌人进行超变身采取不同的战术。</div>
+			<div>必杀是由肌肉异常发达的右脚释放封印能源的「全能踢」，威力约为30吨。与22号首次战斗后,五代将其与第107号技能【空中旋转】融合，研究出「强化全能踢」。自此以后都是使用强化全能踢击倒敌人。</div>
+			<div>操纵哥拿姆最拿手的型态,所以主要以型态骑上摩托车进行战斗。以手环为介质注入封印能源，就能使出与哥拿姆的联合必杀。</div>
+			<div>KUUGA的特殊的形态。基本色是蓝色。掌管水之战士。跳跃力与灵敏都非常优秀，特别是跳跃力有能发挥全能型态3倍以上的数值。当想跳跃到高处时就会变成这个型态。攻击力与防御力都显著地比不上全能型态,为弥补这个缺点,拿起铁管等能使之联想到长的东西(棒状的物体)时就会将其变为「青龙棒」而作为武器。</div>
+
+		</main>
+
+		<script type="text/javascript">
+			let aBtn = document.getElementsByTagName('input')
+			let aDiv = document.getElementsByTagName('div')
+
+			for (let i = 0; i < aBtn.length; i++) {
+				aBtn[i].onmouseover = function() {
+					//上方切换样式
+					for (let i = 0; i < aBtn.length; i++) {
+						aBtn[i].className = ''
+					}
+					this.className = 'hover'
+					//下方切换样式
+					for (let i = 0; i < aBtn.length; i++) {
+						aDiv[i].style.display = 'none'
+					}
+					aDiv[i].style.display = 'block'
+				}
+			}
+		</script>
+	</body>
+</html>

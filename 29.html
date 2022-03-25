@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 80px;
+				height: 80px;
+				margin: 20px;
+				background: #7CFC00;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+
+
+		<script type="text/javascript">
+			var aDiv = document.getElementsByTagName("div")
+
+			timerA = setInterval(function() {
+				if (aDiv[0].offsetWidth <= 400) {
+					var speed = (400 - aDiv[0].offsetWidth) / 20
+					aDiv[0].style.width = aDiv[0].offsetWidth + speed + 'px'
+				} else {
+					clearInterval(timerA)
+				}
+			}, 30)
+			timerB = setInterval(function() {
+				if (aDiv[1].offsetWidth <= 300) {
+					var speed = (300 - aDiv[1].offsetWidth) / 20
+					aDiv[1].style.width = aDiv[1].offsetWidth + speed + 'px'
+				} else {
+					clearInterval(timerB)
+				}
+			}, 30)
+			timerC = setInterval(function() {
+				if (aDiv[2].offsetWidth <= 200) {
+					var speed = (200 - aDiv[2].offsetWidth) / 20
+					aDiv[2].style.width = aDiv[2].offsetWidth + speed + 'px'
+				} else {
+					clearInterval(timerC)
+				}
+			}, 30)
+		</script>
+	</body>
+</html>

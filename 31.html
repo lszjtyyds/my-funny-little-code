@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				height: 2000px;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				background: url(66.png);
+				position: fixed;
+				background-size: cover;
+				top: 100px;
+				left: -200px;
+			}
+			span{
+				width: 20px;
+				height: 100px;
+				background: #DB7093;
+				position: absolute;
+				right: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<span>微信公众号</span>
+		</div>
+		
+		<script type="text/javascript">
+			var oDiv=document.getElementById("box")
+			var timer
+			
+			oDiv.onmouseover=function () {
+				clearInterval(timer)
+				timer=setInterval(function () {
+					if (oDiv.offsetLeft == 0) {
+						clearInterval(timer)
+					} else {
+						oDiv.style.left = oDiv.offsetLeft + 5 + 'px'
+					}
+				},30)
+			}
+			oDiv.onmouseout=function () {
+				clearInterval(timer)
+				timer=setInterval(function () {
+					if (oDiv.offsetLeft == -200) {
+						clearInterval(timer)
+					} else {
+						oDiv.style.left = oDiv.offsetLeft -5 + 'px'
+					}
+				},30)
+			}
+		</script>
+	</body>
+</html>

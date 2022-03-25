@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 30px;
+				height: 30px;
+				background: hotpink;
+				position: absolute;
+				transform: translate(-50%,-50%);
+				transition: 0.1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<script type="text/javascript">
+			var aDiv=document.getElementsByTagName("div")
+			
+			document.onmousemove=function (e) {
+				for (var i=aDiv.length-1;i>0;i--) {
+					aDiv[i].style.left=aDiv[i-1].offsetLeft+'px'
+					aDiv[i].style.top=aDiv[i-1].offsetTop+'px'
+				}
+				aDiv[i].style.top=e.clientY+'px'
+				aDiv[i].style.left=e.clientX+'px'
+			}
+		</script>
+	</body>
+</html>
